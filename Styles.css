@@ -1,0 +1,54 @@
+.Header{
+    background: teal;
+    padding: 2em;
+    text-align: center;
+}
+
+.nav{
+    background: cyan;
+    padding: 1em;
+    text-align: center;
+}
+
+.footer{
+    background: teal;
+    padding: 1em;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: space-evenly;
+   
+}
+
+.flex-container>.content{
+  padding: 10px;  
+  justify-content: space-evenly;
+}
+
+.flex-container>.sidebar{
+    background-color: white;
+    padding: 10px;
+
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    float: right;
+  }
+
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+@media screen and (max-width: 768px){
+    .flex-item
+    {
+        flex-basis: calc(50% - 20px);
+    }
+}

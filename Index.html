@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Map</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="Header">
+        <h1>My Map</h1>
+    </div>
+    <div class="nav">
+        <a href="Index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="Map.html">Maps</a>
+    
+    </div>
+
+    <div class="Flex-container">
+        <div class="tabcontent" id="Area1">
+            <h3>Lasalle College</h3>
+            <p>...School itself! duh!</p>
+        
+        </div>
+        
+        <div class="tabcontent" id="Area2">
+        <h3>Krispy Kreme Cafe</h3>
+        <p>Donuts. Yum!</p>
+        </div>
+
+        <div class="tabcontent" id="Area3">
+        <h3>Ikea Montreal</h3>
+        <p>Furniture</p>
+        </div>
+
+        <div class="tabcontent" id="Area4">
+        <h3>Walmart SuperCenter</h3>
+        <p>Anything you need! You will find it!</p>
+        </div>
+
+        <div class="tabcontent" id="Area5">
+        <h3>T&T Supermarket Montreal</h3>
+        <p>Asian Grocery Store</p>
+        </div>
+
+        <div class="tabcontent" id="Area6">
+        <h3>Snowdon</h3>
+        <p>Metro Station</p>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <img src="./MyMap.png" class="center" usemap="#MyMap">
+        <map name="MyMap">
+            <area href="LasalleCollege.html" shape="rect" coords="1020, 500, 1060, 600" onmouseover="openDescription(event, 'Area1')">
+            <area href="KrispyKremeCafe.html" shape="circle" coords="860, 500, 40" onmouseover="openDescription(event, 'Area2')">
+            <area href="IkeaMontreal.html" shape="poly" coords="600, 500, 550, 600, 650, 600" onmouseover="openDescription(event, 'Area3')">
+            <area href="WalmartSuperCenter.html" shape="rect" coords="720, 500, 780, 600" onmouseover="openDescription(event, 'Area4')">
+            <area href="T&TSupermarketMontreal.html" shape="rect" coords="670, 420, 720, 500" onmouseover="openDescription(event, 'Area5')">
+            <area href="Snowdon.html" shape="rect" coords="820, 550, 880, 620" onmouseover="openDescription(event, 'Area6')">
+            
+        </map>
+
+    </div>
+</body>
+
+<script>
+    function openDescription(event, Area){
+        var i, tabcontent;
+        tabcontent = document.getElementsByClassName('tabcontent');
+        for (i=0; i<tabcontent.length; i++) {
+        tabcontent[i].style.display="none";
+    }
+        document.getElementById(Area).style.display="block";
+        event.currentTarget.className+="active";
+     
+    }
+</script>
+
+</html>
