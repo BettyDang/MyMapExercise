@@ -1,54 +1,77 @@
-.Header{
-    background: teal;
-    padding: 2em;
-    text-align: center;
-}
-
-.nav{
-    background: cyan;
+.header {
+    background-color: black;
+    color: #ffff;
     padding: 1em;
     text-align: center;
+
+
 }
 
-.footer{
-    background: teal;
+.nav {
+    background-color: rgb(117, 132, 132);
     padding: 1em;
-}
-
-.flex-container{
     display: flex;
-    justify-content: space-evenly;
-   
+    justify-content: space-around;
 }
 
-.flex-container>.content{
-  padding: 10px;  
-  justify-content: space-evenly;
+
+
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: left;
+    justify-content: space-around;
 }
 
-.flex-container>.sidebar{
+.flex-container>.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-container>.map {
+    flex-direction: row;
+}
+
+.sidebar {
     background-color: white;
     padding: 10px;
-
-}
-
-img {
-    display: block;
-    margin-left: auto;
     float: right;
-  }
-
-
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 75%;
 }
 
-@media screen and (max-width: 768px){
-    .flex-item
-    {
+footer {
+    background-color: rgb(38, 44, 44);
+    color: palevioletred;
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 60%;
+    border-left: none;
+    height: 100px;
+    display: none;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Clear floats after the tab */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media screen and (max-width: 768px) {
+    .flex-item {
         flex-basis: calc(50% - 20px);
     }
 }
